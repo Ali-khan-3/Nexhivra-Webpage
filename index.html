@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexhivra — Professional Website Development Services</title>
+  <meta name="description" content="Nexhivra builds clean, modern, and high‑performance websites. Discover our services and get in touch today." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#5C7285" />
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Nexhivra — Professional Website Development Services" />
+  <meta property="og:description" content="Nexhivra builds clean, modern, and high‑performance websites. Discover our services and get in touch today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nexhivra.com/" />
+  <meta property="og:image" content="https://nexhivra.com/images/og-image.jpg" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nexhivra — Professional Website Development Services" />
+  <meta name="twitter:description" content="Nexhivra builds clean, modern, and high‑performance websites. Discover our services and get in touch today." />
+  <meta name="twitter:image" content="https://nexhivra.com/images/og-image.jpg" />
+  
+  <!-- Resource Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./images/favicon.png">
+<link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#1A1D1F', /* Even darker for maximum contrast */
+            grayx: '#2F3336', /* Much darker gray */
+            paleblue: '#D7E5F0',
+            beige: '#5C7285',
+          },
+          fontFamily: {
+            inter: ['Inter', 'ui-sans-serif', 'system-ui'],
+            poppins: ['Poppins', 'ui-sans-serif', 'system-ui'],
+          },
+          boxShadow: {
+            soft: '0 10px 25px rgba(0,0,0,0.06)'
+          },
+          borderRadius: {
+            xl2: '12px',
+            xl3: '15px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Devicon for technology icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+
+  
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .backdrop-blur-6 { backdrop-filter: saturate(180%) blur(6px); }
+  </style>
+</head>
+<body class="font-inter text-charcoal bg-white">
+  <!-- Skip to main content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-beige focus:text-white focus:outline-none">
+    Skip to main content
+  </a>
+  <!-- Sticky Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4" id="navbar-inner">
+        <a href="#home" class="font-poppins text-xl sm:text-2xl font-bold tracking-tight text-charcoal">Nexhivra</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-charcoal">
+          <a href="#services" class="hover:text-beige font-semibold transition-colors">Services</a>
+          <a href="#why" class="hover:text-beige font-semibold transition-colors">Why Us</a>
+          <a href="#process" class="hover:text-beige font-semibold transition-colors">Process</a>
+          <a href="#tech" class="hover:text-beige font-semibold transition-colors">Tech Stack</a>
+          <a href="#faq" class="hover:text-beige font-semibold transition-colors">FAQ</a>
+          <a href="#contact" class="ml-2 inline-flex items-center rounded-xl2 bg-beige px-4 py-2 font-medium text-white shadow-soft hover:bg-charcoal transition-colors">Get a Quote</a>
+        </nav>
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl2 border border-charcoal/20 px-3 py-2 text-charcoal" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-charcoal/10 bg-white/90 backdrop-blur-6">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 text-charcoal/90">
+        <a href="#services" class="py-2">Services</a>
+        <a href="#why" class="py-2">Why Us</a>
+        <a href="#process" class="py-2">Process</a>
+        <a href="#tech" class="py-2">Tech Stack</a>
+        <a href="#faq" class="py-2">FAQ</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="#contact" class="mt-2 inline-flex items-center justify-center rounded-xl2 bg-beige px-4 py-2 font-medium text-white shadow-soft hover:bg-charcoal transition-colors">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="pt-28 sm:pt-32">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-paleblue via-white to-beige/30"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div data-aos="fade-right" data-aos-duration="800">
+            <h1 class="font-poppins text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+              Professional Website Development Services
+            </h1>
+            <p class="mt-4 text-base sm:text-lg text-charcoal max-w-2xl font-medium">
+              At Nexhivra, we specialize in websites that are not only beautiful — but built for performance.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="#contact" class="inline-flex items-center rounded-xl3 bg-beige px-6 py-3 font-medium text-white shadow-soft hover:bg-charcoal transition-colors">Get a Quote</a>
+              <a href="#services" class="inline-flex items-center rounded-xl3 bg-charcoal px-6 py-3 font-medium text-white shadow-soft hover:bg-beige hover:text-white transition-colors">View Services</a>
+            </div>
+            <div class="mt-8 flex items-center gap-6 text-sm text-charcoal/70">
+              <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-beige"></span> Fast, SEO‑ready</div>
+              <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-beige"></span> 100% Responsive</div>
+            </div>
+          </div>
+          <div class="relative" data-aos="fade-left" data-aos-duration="800">
+            <div class="aspect-square sm:aspect-[4/3] rounded-xl3 bg-gradient-to-tr from-charcoal to-beige shadow-soft flex items-center justify-center">
+              <!-- Minimal Illustration Placeholder -->
+              <svg class="w-4/5 h-4/5" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="25" width="170" height="120" rx="12" fill="white" fill-opacity="0.8"/>
+                <rect x="30" y="45" width="140" height="10" rx="5" fill="#5C7285"/>
+                <rect x="30" y="65" width="100" height="8" rx="4" fill="#73787C"/>
+                <rect x="30" y="80" width="120" height="8" rx="4" fill="#C5C6C7"/>
+                <rect x="30" y="105" width="60" height="20" rx="6" fill="#5C7285"/>
+                <rect x="95" y="105" width="60" height="20" rx="6" fill="#73787C"/>
+              </svg>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gradient-to-b from-white to-paleblue/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+        <span class="inline-block px-4 py-1.5 text-sm font-bold text-beige bg-beige/20 rounded-full mb-4 shadow-sm">What We Offer</span>
+        <h2 class="font-poppins text-4xl font-bold text-charcoal mb-4">Comprehensive Web Solutions</h2>
+        <p class="text-lg text-charcoal font-semibold">Customized digital experiences designed to elevate your online presence and drive business growth</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- 12 service cards -->
+        <!-- Reusable card template functionally replicated -->
+        <!-- 1 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center text-2xl mb-4 transition-transform group-hover:scale-110 duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Dynamic Business Websites</h3>
+            <ul class="space-y-2 text-charcoal/80 text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Upto 5 informative pages (Home, About, Services, etc.) with custom design</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Secure contact form with email integration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Interactive Google Maps embedding</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Social media integration & share buttons</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Smooth animations & mobile responsiveness</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: Fast CDN deployment & basic SEO setup</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-blue-100/30 group-hover:scale-150 transition-transform duration-500"></div>
+        </div>
+        <!-- 2 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="50">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">E-Commerce Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Product catalog setup (up to 100 products) with custom fields</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Secure payment gateway integration (Razorpay, Stripe, etc.)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Flexible shipping method configuration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Product categories & advanced filtering</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Coupon & discount code system</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: Inventory management & order tracking</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-purple-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 3 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Portfolio Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Interactive projects & work gallery with filtering</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Skills & services showcase sections</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Downloadable resume & project brochures</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Contact forms & inquiry call-to-actions</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Testimonials slider or wall of love</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: Mobile-optimized layout & fast loading</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-amber-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 4 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="0">
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-cyan-50 text-cyan-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Doctor & Hospital Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Specialized service pages (Cardiology, Dentistry, etc.)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Doctor profiles with photos & specialties</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Appointment booking with time slot selection</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Instant contact via direct call buttons</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Emergency contacts & interactive location map</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/80 font-medium mb-3">Includes: HIPAA compliance & patient portal</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-semibold text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-cyan-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 5 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="50">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center text-2xl mb-4 transition-transform group-hover:scale-110 duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Landing Pages</h3>
+            <ul class="space-y-2 text-charcoal text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span class="font-medium">High-converting single-page design</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Strategic call-to-action buttons & forms</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Scroll-triggered animations & sections</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Analytics & tracking code integration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Conversion-focused layout & content strategy</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Mobile-first & lightning-fast performance</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: A/B testing setup & performance optimization</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-blue-100/30 group-hover:scale-150 transition-transform duration-500"></div>
+        </div>
+        <!-- 6 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.478 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.478 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Educational Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>LMS integration (LearnDash, Tutor LMS, etc.)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Secure student login & registration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Automated certificate issuing system</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Video embedding & course materials</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Secure payment gateway integration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Mobile-optimized learning experience</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: Progress tracking & reporting</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-emerald-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 7 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="0">
+          <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-pink-50 text-pink-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Personal Branding</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Compelling 'About Me' with story-based layout</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Optional blog or article section</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Contact form with social media integration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Portfolio & speaking events showcase</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Email capture & newsletter signup</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: SEO optimization & analytics</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-pink-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 8 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="50">
+          <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Blog & News Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Comprehensive category & tag management</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Advanced post scheduling & management</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Author bios with multi-author support</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Comment section with moderation tools</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Built-in SEO and social sharing features</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: RSS, sitemap & analytics</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-indigo-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 9 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute inset-0 bg-gradient-to-br from-rose-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Event & Conference Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Interactive event schedule & agenda section</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Detailed speaker profiles & professional bios</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Seamless ticketing system integration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Dynamic countdown timer with email reminders</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Event highlights gallery & media section</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: Mobile-responsive design & analytics</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-rose-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 10 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="0">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Real Estate Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Comprehensive property listing system for rent/sale</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Advanced location-based search filters</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Automated lead capture & inquiry forms</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>High-resolution image & video galleries</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Instant contact via direct call buttons</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: property schema & interactive maps</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-amber-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 11 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="50">
+          <div class="absolute inset-0 bg-gradient-to-br from-rose-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Restaurant & Food Websites</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Beautiful menu showcase with optional pricing</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Table reservation system with real-time availability</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Interactive location map & dynamic working hours</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Seamless online food ordering integration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Google reviews & customer testimonials showcase</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: food menu schema & photo gallery</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-rose-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+        <!-- 12 -->
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-xl transition-all duration-300 h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute inset-0 bg-gradient-to-br from-violet-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-violet-50 text-violet-500 flex items-center justify-center text-2xl mb-6 transition-transform group-hover:scale-110 duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3 font-poppins">Booking & Appointment</h3>
+            <ul class="space-y-2 text-grayx text-sm mb-4 flex-1">
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Intuitive online appointment booking system</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Real-time calendar & availability management</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Automated email & SMS reminders</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Custom service slots with flexible pricing</span>
+              </li>
+              <li class="flex items-start">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-beige mt-1.5 mr-2 flex-shrink-0"></span>
+                <span>Secure online payment processing</span>
+              </li>
+            </ul>
+            <div class="pt-3 border-t border-gray-100 mt-auto">
+              <p class="text-xs text-charcoal/70 mb-3">Includes: admin dashboard & notifications</p>
+              <a href="#contact" class="inline-flex items-center text-sm font-medium text-beige hover:text-charcoal transition-colors">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-violet-100/30 group-hover:scale-150 transition-transform duration-700"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section id="why" class="py-20 bg-gradient-to-b from-white to-paleblue/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center" data-aos="fade-up">
+        <h2 class="font-poppins text-3xl font-semibold text-charcoal">Why Choose Nexhivra</h2>
+        <p class="mt-3 text-grayx">We combine design excellence with engineering best practices.</p>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- 5 feature cards -->
+        <div class="rounded-xl3 p-6 shadow-soft bg-white" data-aos="fade-up">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center text-sm">1</div>
+          <h4 class="mt-4 font-semibold text-charcoal">Performance First</h4>
+          <p class="mt-2 text-sm text-grayx">Optimized assets, clean code, 90+ Lighthouse target.</p>
+        </div>
+        <div class="rounded-xl3 p-6 shadow-soft bg-paleblue/40" data-aos="fade-up" data-aos-delay="50">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center text-sm">2</div>
+          <h4 class="mt-4 font-semibold text-charcoal">SEO Ready</h4>
+          <p class="mt-2 text-sm text-grayx">Semantic HTML, metadata, accessible components.</p>
+        </div>
+        <div class="rounded-xl3 p-6 shadow-soft bg-white" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center text-sm">3</div>
+          <h4 class="mt-4 font-semibold text-charcoal">Responsive Design</h4>
+          <p class="mt-2 text-sm text-grayx">Mobile‑first, tested at key breakpoints.</p>
+        </div>
+        <div class="rounded-xl3 p-6 shadow-soft bg-paleblue/40" data-aos="fade-up" data-aos-delay="150">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center text-sm">4</div>
+          <h4 class="mt-4 font-semibold text-charcoal">Transparent Process</h4>
+          <p class="mt-2 text-sm text-grayx">Clear steps, regular updates, no surprises.</p>
+        </div>
+        <div class="rounded-xl3 p-6 shadow-soft bg-white" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center text-sm">5</div>
+          <h4 class="mt-4 font-semibold text-charcoal">Reliable Support</h4>
+          <p class="mt-2 text-sm text-grayx">Dedicated support and timely delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-20 bg-paleblue">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center" data-aos="fade-up">
+        <h2 class="font-poppins text-3xl font-semibold text-charcoal">Our Process</h2>
+        <p class="mt-3 text-grayx">A transparent, collaborative approach from idea to launch.</p>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-xl3 bg-white p-6 shadow-soft" data-aos="fade-up">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center">1</div>
+          <h3 class="mt-4 font-semibold text-charcoal">Discovery</h3>
+          <p class="mt-2 text-sm text-grayx">We understand your goals, audience, and success metrics.</p>
+        </div>
+        <div class="rounded-xl3 bg-white p-6 shadow-soft" data-aos="fade-up" data-aos-delay="50">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center">2</div>
+          <h3 class="mt-4 font-semibold text-charcoal">Design</h3>
+          <p class="mt-2 text-sm text-grayx">Wireframes and UI design focused on clarity and conversion.</p>
+        </div>
+        <div class="rounded-xl3 bg-white p-6 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center">3</div>
+          <h3 class="mt-4 font-semibold text-charcoal">Development</h3>
+          <p class="mt-2 text-sm text-grayx">Clean code, performance best practices, and integrations.</p>
+        </div>
+        <div class="rounded-xl3 bg-white p-6 shadow-soft" data-aos="fade-up" data-aos-delay="150">
+          <div class="h-10 w-10 rounded-full bg-beige text-white flex items-center justify-center">4</div>
+          <h3 class="mt-4 font-semibold text-charcoal">Launch & Support</h3>
+          <p class="mt-2 text-sm text-grayx">Deployment, analytics, and ongoing improvements.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10" data-aos="fade-up">
+        <a href="#contact" class="inline-flex items-center rounded-xl2 bg-charcoal px-6 py-3 font-medium text-white shadow-soft hover:bg-beige transition-colors">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="tech" class="py-20 bg-gradient-to-b from-white to-paleblue/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+        <span class="inline-block px-4 py-1.5 text-sm font-bold text-beige bg-beige/20 rounded-full mb-4 shadow-sm">Our Tech</span>
+        <h2 class="font-poppins text-3xl font-bold text-charcoal">Modern, Proven Stack</h2>
+        <p class="text-grayx mt-3">We choose the right tools for reliability, speed, and maintainability.</p>
+      </div>
+      <div role="list" aria-label="Technology logos">
+        <!-- Row 1: Frontend Technologies -->
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-3xl sm:text-4xl mb-6">
+          <span role="listitem" title="HTML5" aria-label="HTML5" data-aos="zoom-in"><i class="devicon-html5-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="CSS3" aria-label="CSS3" data-aos="zoom-in" data-aos-delay="25"><i class="devicon-css3-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="JavaScript" aria-label="JavaScript" data-aos="zoom-in" data-aos-delay="50"><i class="devicon-javascript-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="TypeScript" aria-label="TypeScript" data-aos="zoom-in" data-aos-delay="75"><i class="devicon-typescript-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="React" aria-label="React" data-aos="zoom-in" data-aos-delay="100"><i class="devicon-react-original colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="Next.js" aria-label="Next.js" data-aos="zoom-in" data-aos-delay="125"><i class="devicon-nextjs-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="Node.js" aria-label="Node.js" data-aos="zoom-in" data-aos-delay="150"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="Express" aria-label="Express" data-aos="zoom-in" data-aos-delay="175"><i class="devicon-express-original colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="Tailwind CSS" aria-label="Tailwind CSS" data-aos="zoom-in" data-aos-delay="200"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+          <span role="listitem" title="Sass" aria-label="Sass" data-aos="zoom-in" data-aos-delay="225"><i class="devicon-sass-original colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="ShadCN" aria-label="ShadCN" data-aos="zoom-in" data-aos-delay="250"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="currentColor" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.3 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="m19.01 11.55-7.46 7.46c-.46.46-.46 1.19 0 1.65a1.16 1.16 0 0 0 1.64 0l7.46-7.46c.46-.46.46-1.19 0-1.65s-1.19-.46-1.65 0ZM19.17 3.34c-.46-.46-1.19-.46-1.65 0L3.34 17.52c-.46.46-.46 1.19 0 1.65a1.16 1.16 0 0 0 1.64 0L19.16 4.99c.46-.46.46-1.19 0-1.65Z" class="b"></path>
+</svg></span>
+          <span role="listitem" title="Material UI" aria-label="Material UI" data-aos="zoom-in" data-aos-delay="275"><i class="devicon-materialui-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="Framer Motion" aria-label="Framer Motion" data-aos="zoom-in" data-aos-delay="300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128" fill="currentColor" aria-hidden="true">
+            <path d="M22.684 0h84.253v42.667H64.81L22.684 0Zm0 42.667H64.81l42.127 42.666H64.81V128L22.684 85.333V42.667Z"></path>
+            </svg></span>
+          <span role="listitem" title="jQuery" aria-label="jQuery" data-aos="zoom-in" data-aos-delay="325"><i class="devicon-jquery-plain colored" aria-hidden="true"></i></span>
+        </div>
+
+        <!-- Row 2: Backend, Database, Tools & Deploy -->
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-3xl sm:text-4xl">
+          <span role="listitem" title="Zustand" aria-label="Zustand" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-plain.svg" alt="Zustand" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+          <span role="listitem" title="MongoDB" aria-label="MongoDB" data-aos="zoom-in" data-aos-delay="25"><i class="devicon-mongodb-plain colored" aria-hidden="true"></i></span>
+          <span role="listitem" title="Prisma" aria-label="Prisma" data-aos="zoom-in" data-aos-delay="50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128" fill="currentColor" aria-hidden="true">
+            <path fill="#2d3748" d="M66.457.014a6.308 6.308 0 0 0-5.812 3.028l-47.87 78.072a6.379 6.379 0 0 0 .048 6.748l23.568 37.186a6.387 6.387 0 0 0 7.22 2.683l68.012-20.407a6.37 6.37 0 0 0 3.96-8.765l-43.72-94.85A6.298 6.298 0 0 0 66.46.014Zm1.795 23.95a2.348 2.348 0 0 1 2.448 1.433l30.16 69.784a2.39 2.39 0 0 1-1.512 3.241l-46.996 14.024a2.39 2.39 0 0 1-3.024-2.76l16.83-83.812a2.353 2.353 0 0 1 2.099-1.91z"></path>
+            </svg></span>
+          <span role="listitem" title="Firebase" aria-label="Firebase" data-aos="zoom-in" data-aos-delay="75"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+          <span role="listitem" title="Figma" aria-label="Figma" data-aos="zoom-in" data-aos-delay="100"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+          <span role="listitem" title="Git" aria-label="Git" data-aos="zoom-in" data-aos-delay="125"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+          <span role="listitem" title="GitHub" aria-label="GitHub" data-aos="zoom-in" data-aos-delay="150"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+          <span role="listitem" title="Vercel" aria-label="Vercel" data-aos="zoom-in" data-aos-delay="175">▲</span>
+          <span role="listitem" title="Postman" aria-label="Postman" data-aos="zoom-in" data-aos-delay="200"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman" class="h-8 w-8 sm:h-10 sm:w-10" /></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-paleblue/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center" data-aos="fade-up">
+        <h2 class="font-poppins text-3xl font-semibold text-charcoal">Frequently Asked Questions</h2>
+        <p class="mt-3 text-grayx">Clear answers to help you decide faster.</p>
+      </div>
+      <div class="mx-auto max-w-3xl space-y-4" role="region" aria-label="Frequently Asked Questions">
+        <!-- Accordion item -->
+        <div class="rounded-xl2 bg-white shadow-soft" data-aos="fade-up">
+          <button class="faq-toggle w-full text-left px-5 py-4 flex items-center justify-between" 
+                  aria-expanded="false" 
+                  aria-controls="faq-1">
+            <span class="font-medium text-charcoal">How long does a project take?</span>
+            <svg class="h-5 w-5 text-charcoal transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+          </button>
+          <div id="faq-1" class="faq-content hidden px-5 pb-5 text-grayx" role="region">
+            Typical timelines range from 1–2 weeks (landing) to 4–6 weeks (professional, e‑commerce) depending on scope.
+          </div>
+        <div class="rounded-xl2 bg-white shadow-soft" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-toggle w-full text-left px-5 py-4 flex items-center justify-between">
+            <span class="font-medium text-charcoal">Do you provide content and images?</span>
+            <svg class="h-5 w-5 text-charcoal transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-grayx">
+            We can source licensed assets and provide copy guidance. You can also supply your own brand assets.
+          </div>
+        <div class="rounded-xl2 bg-white shadow-soft" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-toggle w-full text-left px-5 py-4 flex items-center justify-between">
+            <span class="font-medium text-charcoal">What tech stack do you use?</span>
+            <svg class="h-5 w-5 text-charcoal transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-grayx">
+            We deliver static or React sites with TailwindCSS, integrate CMS/e‑commerce as needed, and deploy to Netlify or Vercel.
+          </div>
+        <div class="rounded-xl2 bg-white shadow-soft" data-aos="fade-up" data-aos-delay="150">
+          <button class="faq-toggle w-full text-left px-5 py-4 flex items-center justify-between">
+            <span class="font-medium text-charcoal">Is maintenance included?</span>
+            <svg class="h-5 w-5 text-charcoal transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-grayx">
+            We offer optional maintenance plans covering updates, monitoring, and content changes.
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 relative">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-beige/20 via-paleblue/40 to-white"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div data-aos="fade-right">
+          <h2 class="font-poppins text-3xl font-semibold text-charcoal">Let's Build Your Website</h2>
+          <p class="mt-3 text-grayx">Tell us about your project. We'll get back within 24 hours.</p>
+          <ul class="mt-6 space-y-3 text-charcoal/80">
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-beige"></span> Premium, modern UI with performance at the core.</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-beige"></span> SEO, analytics, and accessibility baked in.</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-beige"></span> Deployed to fast global CDNs.</li>
+          </ul>
+        </div>
+        <div data-aos="fade-left">
+          <form action="https://api.web3forms.com/submit" 
+                method="POST" 
+                class="rounded-xl3 bg-white/90 p-6 shadow-soft border border-charcoal/10"
+                aria-label="Contact form">
+            <input type="hidden" name="access_key" value="03e4778c-510a-4f2d-8663-117514e22fdc">
+            <input type="hidden" name="from_name" value="Nexhivra Contact Form">
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="hidden" name="redirect" value="thankyou.html">
+            <div class="grid sm:grid-cols-2 gap-4" role="group" aria-label="Contact information">
+              <div>
+                <label for="first_name" class="block text-sm text-charcoal/80">First Name</label>
+                <input required 
+                       id="first_name"
+                       name="first_name" 
+                       type="text" 
+                       class="mt-1 w-full rounded-xl2 border border-charcoal/30 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-beige" 
+                       placeholder="your name"
+                       aria-required="true"
+                       pattern="[A-Za-z ]+"
+                       title="Please enter a valid name (letters and spaces only)"
+                       minlength="2" />
+              </div>
+              <div>
+                <label class="block text-sm text-charcoal/80">Last Name</label>
+                <input required name="last_name" type="text" class="mt-1 w-full rounded-xl2 border border-charcoal/30 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-beige" placeholder="your last name" />
+              </div>
+              <div>
+                <label class="block text-sm text-charcoal/80">Email</label>
+                <input required name="email" type="email" class="mt-1 w-full rounded-xl2 border border-charcoal/30 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-beige" placeholder="you@example.com" />
+              </div>
+              <div>
+                <label class="block text-sm text-charcoal/80">Phone</label>
+                <input name="phone" type="tel" class="mt-1 w-full rounded-xl2 border border-charcoal/30 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-beige" placeholder="+91 9922256506" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-sm text-charcoal/80">Category</label>
+                <select name="category" class="mt-1 w-full rounded-xl2 border border-charcoal/30 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-beige">
+                  <option>Static Website</option>
+                  <option>Business Website</option>
+                  <option>Professional Website</option>
+                  <option>E‑commerce</option>
+                  <option>Custom Solution</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-sm text-charcoal/80">Message</label>
+                <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl2 border border-charcoal/30 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-beige" placeholder="Tell us about your project, timeline, and any references..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="mt-5 inline-flex rounded-xl2 bg-charcoal px-6 py-3 font-medium text-white hover:bg-beige transition-colors">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-paleblue">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <div class="font-poppins text-xl font-semibold">Nexhivra</div>
+          <p class="text-grayx mt-1">© <span id="year"></span> Nexhivra. All rights reserved.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" aria-label="Twitter" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.56 8.56 0 01-2.71 1.04 4.26 4.26 0 00-7.26 3.89A12.1 12.1 0 013 4.89a4.24 4.24 0 001.32 5.68 4.2 4.2 0 01-1.93-.53v.05a4.26 4.26 0 003.42 4.17 4.27 4.27 0 01-1.92.07 4.26 4.26 0 003.98 2.96A8.54 8.54 0 012 19.54a12.07 12.07 0 006.56 1.92c7.87 0 12.18-6.52 12.18-12.18 0-.19 0-.39-.01-.58A8.7 8.7 0 0022.46 6z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.43c0-1.3-.02-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.89v5.52H9.41V9h3.41v1.56h.05c.48-.91 1.64-1.86 3.38-1.86 3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.13 20.45H3.55V9h3.58v11.45z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 7.2A4.8 4.8 0 1016.8 12 4.8 4.8 0 0012 7.2zm0 7.9A3.1 3.1 0 1115.1 12 3.1 3.1 0 0112 15.1zm5.9-8.64a1.12 1.12 0 11-1.12-1.12 1.12 1.12 0 011.12 1.12z"/><path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.055 1.95.24 2.4.4a4.8 4.8 0 012.73 2.73c.16.45.346 1.23.4 2.4.058 1.27.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.95-.4 2.4a4.8 4.8 0 01-2.73 2.73c-.45.16-1.23.346-2.4.4-1.27.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.95-.24-2.4-.4a4.8 4.8 0 01-2.73-2.73c-.16-.45-.346-1.23-.4-2.4C2.172 15.584 2.16 15.2 2.16 12s.012-3.584.07-4.85c.055-1.17.24-1.95.4-2.4a4.8 4.8 0 012.73-2.73c.45-.16 1.23-.346 2.4-.4 1.27-.058 1.65-.07 4.85-.07z"/></svg>
+          </a>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Terms</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="./script.js"></script>
+  
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-white p-4 shadow-lg transform translate-y-full transition-transform duration-300 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-charcoal">We use cookies to improve your experience. By continuing to use our site, you agree to our <a href="#" class="text-beige hover:text-charcoal">cookie policy</a>.</p>
+      <div class="flex gap-3">
+        <button onclick="rejectCookies()" class="px-4 py-2 text-sm font-medium text-charcoal hover:text-beige transition-colors">Reject All</button>
+        <button onclick="acceptCookies()" class="px-4 py-2 text-sm font-medium bg-beige text-white rounded-xl2 hover:bg-charcoal transition-colors">Accept All</button>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Nexhivra</title>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #73787C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+    }
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+    button {
+      background: #5C7285;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background: #73787C;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>You're Offline</h1>
+    <p>It seems you've lost your internet connection. Please check your connection and try again.</p>
+    <button onclick="window.location.reload()">Retry</button>
+  </div>
+</body>
+</html>

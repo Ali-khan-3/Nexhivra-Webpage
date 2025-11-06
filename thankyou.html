@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — Nexhivra</title>
+  <meta name="description" content="Thank you for contacting Nexhivra. We'll get back to you soon." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#5C7285" />
+  
+  <!-- Resource Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#1A1D1F',
+            grayx: '#2F3336',
+            paleblue: '#D7E5F0',
+            beige: '#5C7285',
+          },
+          fontFamily: {
+            inter: ['Inter', 'ui-sans-serif', 'system-ui'],
+            poppins: ['Poppins', 'ui-sans-serif', 'system-ui'],
+          },
+          boxShadow: {
+            soft: '0 10px 25px rgba(0,0,0,0.06)'
+          },
+          borderRadius: {
+            xl2: '12px',
+            xl3: '15px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-inter text-charcoal bg-gradient-to-b from-white to-paleblue/30 min-h-screen flex items-center justify-center">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+    <div data-aos="fade-up" class="bg-white/90 rounded-xl3 p-8 sm:p-12 shadow-soft border border-charcoal/10">
+      <!-- Success Icon -->
+      <div class="mx-auto w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      
+      <!-- Thank You Message -->
+      <h1 class="font-poppins text-3xl sm:text-4xl font-bold text-charcoal mb-4">
+        Thank You for Contacting Us!
+      </h1>
+      <p class="text-lg text-grayx mb-6">
+        We've received your message and will get back to you soon.
+      </p>
+      <p class="text-sm text-charcoal/70 mb-8">
+        Our team typically responds within 24-48 hours. We appreciate your patience!
+      </p>
+      
+      <!-- Back to Home Button -->
+      <a href="index.html#contact" class="inline-flex items-center rounded-xl2 bg-beige px-6 py-3 font-medium text-white shadow-soft hover:bg-charcoal transition-colors">
+        Back to Home
+      </a>
+    </div>
+  </div>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>
+
