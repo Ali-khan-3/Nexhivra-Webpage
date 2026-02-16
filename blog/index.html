@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexhivra Blog — Website Development Insights & Pricing Guides</title>
+  <meta name="description" content="Read Nexhivra’s expert articles on website development cost in Mumbai, pricing models, and practical guides to plan your next website project." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#5C7285" />
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Nexhivra Blog — Website Development Insights & Pricing Guides" />
+  <meta property="og:description" content="High-intent, practical articles on website development cost, pricing, and strategy for businesses in Mumbai and beyond." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nexhivra.com/blog/" />
+  <meta property="og:image" content="https://nexhivra.com/images/1.png" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nexhivra Blog — Website Development Insights & Pricing Guides" />
+  <meta name="twitter:description" content="Actionable website development and pricing guides from the Nexhivra team." />
+  <meta name="twitter:image" content="https://nexhivra.com/images/1.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://nexhivra.com/blog/" />
+
+  <!-- Resource Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#1A1D1F',
+            grayx: '#2F3336',
+            paleblue: '#D7E5F0',
+            beige: '#5C7285',
+          },
+          fontFamily: {
+            inter: ['Inter', 'ui-sans-serif', 'system-ui'],
+            poppins: ['Poppins', 'ui-sans-serif', 'system-ui'],
+          },
+          boxShadow: {
+            soft: '0 10px 25px rgba(0,0,0,0.06)'
+          },
+          borderRadius: {
+            xl2: '12px',
+            xl3: '15px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .backdrop-blur-6 { backdrop-filter: saturate(180%) blur(6px); }
+  </style>
+
+  <!-- Blog Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "url": "https://nexhivra.com/blog/",
+    "name": "Nexhivra Blog",
+    "description": "Nexhivra’s blog on website development cost, pricing, and digital strategy for businesses in Mumbai.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexhivra",
+      "url": "https://nexhivra.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nexhivra.com/images/1.png"
+      }
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Website Development Cost in Mumbai 2026 – Exact Prices, Packages & Hiring Guide",
+        "url": "https://nexhivra.com/blog/website-development-cost-in-mumbai-2026.html",
+        "datePublished": "2026-02-16",
+        "dateModified": "2026-02-16",
+        "author": {
+          "@type": "Organization",
+          "name": "Nexhivra"
+        },
+        "image": "https://nexhivra.com/images/1.png"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="font-inter text-charcoal bg-white">
+  <!-- Skip to main content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-beige focus:text-white focus:outline-none">
+    Skip to main content
+  </a>
+
+  <!-- Sticky Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4" id="navbar-inner">
+        <a href="../index.html#home" class="font-poppins text-xl sm:text-2xl font-bold tracking-tight text-charcoal">Nexhivra</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-charcoal">
+          <a href="../index.html#services" class="hover:text-beige font-semibold transition-colors">Services</a>
+          <a href="../index.html#why" class="hover:text-beige font-semibold transition-colors">Why Us</a>
+          <a href="../index.html#process" class="hover:text-beige font-semibold transition-colors">Process</a>
+          <a href="../index.html#tech" class="hover:text-beige font-semibold transition-colors">Tech Stack</a>
+          <a href="index.html" class="hover:text-beige font-semibold transition-colors underline underline-offset-4">Blog</a>
+          <a href="../index.html#faq" class="hover:text-beige font-semibold transition-colors">FAQ</a>
+          <a href="../index.html#contact" class="ml-2 inline-flex items-center rounded-xl2 bg-beige px-4 py-2 font-medium text-white shadow-soft hover:bg-charcoal transition-colors">Get a Quote</a>
+        </nav>
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl2 border border-charcoal/20 px-3 py-2 text-charcoal" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-charcoal/10 bg-white/90 backdrop-blur-6">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 text-charcoal/90">
+        <a href="../index.html#services" class="py-2">Services</a>
+        <a href="../index.html#why" class="py-2">Why Us</a>
+        <a href="../index.html#process" class="py-2">Process</a>
+        <a href="../index.html#tech" class="py-2">Tech Stack</a>
+        <a href="index.html" class="py-2">Blog</a>
+        <a href="../index.html#faq" class="py-2">FAQ</a>
+        <a href="../index.html#contact" class="py-2">Contact</a>
+        <a href="../index.html#contact" class="mt-2 inline-flex items-center justify-center rounded-xl2 bg-beige px-4 py-2 font-medium text-white shadow-soft hover:bg-charcoal transition-colors">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="pt-28 sm:pt-32">
+    <!-- Hero / Intro -->
+    <section class="pb-12 sm:pb-16 bg-gradient-to-b from-paleblue/30 via-white to-paleblue/20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="inline-flex items-center px-4 py-1.5 rounded-full bg-beige/10 text-xs sm:text-sm font-semibold text-beige uppercase tracking-wide shadow-soft">
+            Nexhivra Blog
+          </p>
+          <h1 class="mt-4 font-poppins text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+            Website Development Insights, Pricing Guides &amp; Practical Playbooks
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-charcoal max-w-2xl">
+            Deep-dive articles for founders, marketing teams, and business owners in Mumbai who want clarity on website budgets, timelines, and ROI — without the fluff.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-charcoal/70">
+            <span>✅ Transparent pricing breakdowns</span>
+            <span>✅ Strategy-first recommendations</span>
+            <span>✅ Written by practitioners</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog List -->
+    <section class="py-10 sm:py-14">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Article Card: Website Development Cost in Mumbai 2026 -->
+          <article class="group relative overflow-hidden rounded-xl3 bg-white shadow-soft border border-charcoal/5 flex flex-col" data-aos="fade-up">
+            <div class="h-40 sm:h-44 bg-gradient-to-tr from-charcoal to-beige flex items-center justify-center overflow-hidden">
+              <img src="../images/1.png" alt="Illustration showing pricing breakdown for website development in Mumbai" class="h-full w-full object-cover opacity-90 mix-blend-multiply" loading="lazy" />
+            </div>
+            <div class="flex-1 p-6 flex flex-col">
+              <div class="flex items-center justify-between text-xs text-charcoal/70 mb-3">
+                <span class="inline-flex items-center rounded-full bg-paleblue/60 px-3 py-1 font-medium text-charcoal">Pricing &amp; Strategy</span>
+                <time datetime="2026-02-16" class="font-medium">16 Feb 2026</time>
+              </div>
+              <h2 class="text-lg sm:text-xl font-semibold font-poppins text-charcoal mb-2 group-hover:text-beige transition-colors">
+                <a href="website-development-cost-in-mumbai-2026.html" class="stretched-link">
+                  Website Development Cost in Mumbai 2026 – Exact Prices, Packages &amp; Hiring Guide
+                </a>
+              </h2>
+              <p class="text-sm text-charcoal/80 mb-4">
+                A complete breakdown of website development cost in Mumbai in 2026 — with real price ranges, examples, and a step-by-step hiring checklist you can use today.
+              </p>
+              <div class="mt-auto flex items-center justify-between text-sm">
+                <a href="website-development-cost-in-mumbai-2026.html" class="inline-flex items-center text-beige font-semibold hover:text-charcoal transition-colors">
+                  Read article
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+                <span class="text-charcoal/60">~10 min read</span>
+              </div>
+            </div>
+            <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-tr from-paleblue/40 via-transparent to-beige/10"></div>
+          </article>
+        </div>
+
+        <!-- Supporting CTA -->
+        <div class="mt-12 rounded-xl3 bg-charcoal text-white p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6" data-aos="fade-up">
+          <div>
+            <h2 class="font-poppins text-2xl font-semibold mb-2">
+              Planning a website in 2026 and need a clear quote?
+            </h2>
+            <p class="text-sm sm:text-base text-paleblue">
+              Share your requirements and we’ll send a transparent, line-item estimate — including recommended tech stack, timelines, and ways to reduce cost without cutting corners.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="../index.html#contact" class="inline-flex items-center rounded-xl2 bg-beige px-5 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-white hover:text-charcoal transition-colors">
+              Get a website quote
+            </a>
+            <a href="../index.html#services" class="inline-flex items-center rounded-xl2 border border-paleblue/60 px-5 py-2.5 text-sm font-medium text-paleblue hover:bg-white hover:text-charcoal transition-colors">
+              View all services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-paleblue">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <div class="font-poppins text-xl font-semibold">Nexhivra</div>
+          <p class="text-grayx mt-1">© <span id="year"></span> Nexhivra. All rights reserved.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" aria-label="Twitter" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.56 8.56 0 01-2.71 1.04 4.26 4.26 0 00-7.26 3.89A12.1 12.1 0 013 4.89a4.24 4.24 0 001.32 5.68 4.2 4.2 0 01-1.93-.53v.05a4.26 4.26 0 003.42 4.17 4.27 4.27 0 01-1.92.07 4.26 4.26 0 003.98 2.96A8.54 8.54 0 012 19.54a12.07 12.07 0 006.56 1.92c7.87 0 12.18-6.52 12.18-12.18 0-.19 0-.39-.01-.58A8.7 8.7 0 0022.46 6z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.43c0-1.3-.02-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.89v5.52H9.41V9h3.41v1.56h.05c.48-.91 1.64-1.86 3.38-1.86 3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.13 20.45H3.55V9h3.58v11.45z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 7.2A4.8 4.8 0 1016.8 12 4.8 4.8 0 0012 7.2zm0 7.9A3.1 3.1 0 1115.1 12 3.1 3.1 0 0112 15.1zm5.9-8.64a1.12 1.12 0 11-1.12-1.12 1.12 1.12 0 011.12 1.12z"/><path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.055 1.95.24 2.4.4a4.8 4.8 0 012.73 2.73c.16.45.346 1.23.4 2.4.058 1.27.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.95-.4 2.4a4.8 4.8 0 01-2.73 2.73c-.45.16-1.23.346-2.4.4-1.27.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.95-.24-2.4-.4a4.8 4.8 0 01-2.73-2.73c-.16-.45-.346-1.23-.4-2.4C2.172 15.584 2.16 15.2 2.16 12s.012-3.584.07-4.85c.055-1.17.24-1.95.4-2.4a4.8 4.8 0 012.73-2.73c.45-.16 1.23-.346 2.4-.4 1.27-.058 1.65-.07 4.85-.07z"/></svg>
+          </a>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Terms</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../script.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-white p-4 shadow-lg transform translate-y-full transition-transform duration-300 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-charcoal">We use cookies to improve your experience. By continuing to use our site, you agree to our <a href="#" class="text-beige hover:text-charcoal">cookie policy</a>.</p>
+      <div class="flex gap-3">
+        <button onclick="rejectCookies()" class="px-4 py-2 text-sm font-medium text-charcoal hover:text-beige transition-colors">Reject All</button>
+        <button onclick="acceptCookies()" class="px-4 py-2 text-sm font-medium bg-beige text-white rounded-xl2 hover:bg-charcoal transition-colors">Accept All</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
